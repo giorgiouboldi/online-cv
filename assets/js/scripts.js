@@ -3,7 +3,7 @@ $(document).ready(function(){
 var a = {};
 
 a.settings = {
-	url: 'http://sam-w.com/',
+	url: 'http://www.giorgiouboldi.com/',
 	speed: 400,
 	easing: 'easeInOutCubic'
 },
@@ -61,11 +61,11 @@ a.site = {
 	startTabletop: function(){
 		Tabletop.init({
 			// Replace this key with your Google Sheets shared sheet ID
-			key: '1x1M2mwl7eSxDxuKrrQ0B6eNCBHqzaaGZOZrtwvZyNyM',
+			key: '1XiA2HEtYrlwEcLu6RqoI8wh4L0lQeD1Wegy7kGNzAGE',
 			parseNumbers: true,
 			callback: a.site.processTabletop
 		});
-	}, 
+	},
 
 	processTabletop: function(data, tabletop){
 		a.site.sheets = a.helpers.sortObj(tabletop.sheets(), 'asc');
@@ -106,7 +106,7 @@ a.site = {
 				page.append(section);
 
 			}
-			
+
 
 		});
 
@@ -117,7 +117,7 @@ a.site = {
 	startViewer: function(){
 		var link = location.href;
 		var id = link.substring(link.indexOf('?') + 1);
-		
+
 		$('body').html('<iframe src="https://docs.google.com/document/d/' + id + '/?rm=full"></iframe>').addClass('visible');
 	}
 
@@ -150,11 +150,11 @@ a.helpers = {
 
 	checkMediaQuery: function(){
 		var mediaCheck = $('.media-check').css('text-indent');
-		if(mediaCheck === '10px'){a.sizes.media = 'mobile';} 
-		else if(mediaCheck === '20px'){a.sizes.media = 'tablet';} 
-		else if(mediaCheck === '30px'){a.sizes.media = 'desktop';} 
-		else if(mediaCheck === '40px'){a.sizes.media = 'xl';} 
-		else if(mediaCheck === '50px'){a.sizes.media = 'xxl';} 
+		if(mediaCheck === '10px'){a.sizes.media = 'mobile';}
+		else if(mediaCheck === '20px'){a.sizes.media = 'tablet';}
+		else if(mediaCheck === '30px'){a.sizes.media = 'desktop';}
+		else if(mediaCheck === '40px'){a.sizes.media = 'xl';}
+		else if(mediaCheck === '50px'){a.sizes.media = 'xxl';}
 		else {a.sizes.media = 'unsure';}
 	},
 
@@ -162,7 +162,7 @@ a.helpers = {
 		return Math.floor(Math.random()*(max-min+1)+min);
 	},
 
-	/* Run function once after CSS transtion ended eg. 
+	/* Run function once after CSS transtion ended eg.
 	$(el).one(a.helpers.whichTransition, function(e){
 		console.log('Transition complete!  This is the callback!');
 	}); */

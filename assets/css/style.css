@@ -24,7 +24,13 @@ footer, header, hgroup, menu, nav, section, main {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
+
+section{
+  border-top: 1px solid #cecece;
+  padding-top: 2rem;
+}
 
 ol, ul {
   list-style: none; }
@@ -36,6 +42,11 @@ blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none; }
+
+h2{
+  font-size: 80%;
+  text-transform: uppercase;
+}
 
 table {
   border-collapse: collapse;
@@ -162,7 +173,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background: #fff;
   color: #111;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.4vw;
   line-height: 1.75em;
   font-weight: 400;
@@ -255,12 +266,13 @@ section:first-child a:hover {
 
 .column-text li {
   display: block;
-  clear: both; }
+  clear: both;
+  padding-bottom: 1.2em;}
 
 .title {
   display: block;
   float: left;
-  width: 15%;
+  width: 25%;
   padding-right: 2.5%; }
   @media (max-width: 760px) {
     .title {
@@ -272,7 +284,7 @@ section:first-child a:hover {
   width: 100%; }
 
 .title + .text {
-  width: 85%; }
+  width: 75%; }
   @media (max-width: 760px) {
     .title + .text {
       width: 75%; } }
